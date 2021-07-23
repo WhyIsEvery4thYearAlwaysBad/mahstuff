@@ -2,7 +2,7 @@
 
 If you're reading this I have likely linked you to this markdown file. This is so I can save time and not have to argue the same points over and over.
 
-Anyway I'm not getting dispenser range, because it simply isn't useful enough to be top priority (or even worth purchasing) and it is ***heavily*** overrated.
+Anyway I'm not getting dispenser range, because it simply is not useful enough to be top priority (or even worth purchasing) and it is ***heavily*** overrated.
 
 ## "But dispenser range allows you to spread out further!"
 
