@@ -35,7 +35,7 @@ All of which have a clearly beneficial impact on engineer with no margin of erro
 ## "But Dispenser Range is meta!"
 ## "Dispenser Range is good, because it is a meta upgrade."
 
-`meta ≠ good` (Just because *X* is part of the meta, does not mean it is good.)
+`X + IsMetaItem() ≉ good` (Just because *X* is part of the meta, does not mean it is good.) In this case *X* = Dispenser Range.
 
 Examples:
 
@@ -51,9 +51,11 @@ Examples:
 
 Tour numbers/bot kills are a bad metric to use for recording a player's performance in game. The information they carry is arbitrary, as it is undefined how much experience they typically carry.
 
+Please see the "Tours = Skill" section in [*MvM: Dumb $#!& the Meta "Teaches" You* by Mister U or Underscore Gaming](https://steamcommunity.com/sharedfiles/filedetails/?id=289059169) for more information.
+
 ## "Well you are an idiot for thinking *X*."
 
-Before calling me an idiot for thinking *X*, verify that I am actually being an idiot and not just presenting arguments incomprehensible to you. (No that is not me being pretentious; that's me telling you that `incomprehensible arguments ≉ being an idiot` (or that incomprehensible arguments do not *neccessarily* relate to being an idiot); sometimes humans simply do not understand them.)
+Before calling me an idiot for thinking *X*, verify that I am actually being an idiot and not just presenting arguments incomprehensible to you. No that is not me being pretentious; that's me telling you that `incomprehensible arguments ≉ being an idiot/smartass` (or that incomprehensible arguments do not *neccessarily* relate to being an idiot or smartass); sometimes humans simply do not understand them.
 
 ## "Dispenser Range is good/useful because it is good/useful!"
 
