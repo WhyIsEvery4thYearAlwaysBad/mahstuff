@@ -39,6 +39,10 @@ You may notice that I have listed TFAttributes in an ordered list, instead of an
 
 ### General
 
+#### Compromise
+An important lesson to learn before developing nav meshes is that you ***will*** have to compromise at some point. 
+
+#### Size
 Each nav area takes up 768 bytes. 768 bytes is a small amount of storage space today, so while it is a good idea to try to simplify nav areas to save on storage space, 
 
 **It is bad to oversimplify nav areas** as TF2 uses nav areas to determine where Demoman TFBots place sticky traps and areas that have sentries in range. So nav areas
@@ -75,7 +79,7 @@ There will be moments where you'll need multiple TFAttributes to get bots to wor
 
 <br>
 
-Tip: `nav_splice`, `nav_shift`, `nav_corner_raise`, and `nav_corner_lower` will help you shift nav areas onto each other.
+Tip: `nav_shift`, `nav_corner_raise`, and `nav_corner_lower` will help you shift nav areas onto each other.
 
 ### Forcing a connection
 <hr>
@@ -84,7 +88,9 @@ Some connections cannot be made, because the connection would go in a negative d
 
 To get around this issue, move the nav mesh to where the desired connection can be made without becoming degenerate. 
 
-Tip: `nav_splice`, `nav_shift`, `nav_corner_raise`, and `nav_corner_lower` will help you move nav areas.
+Tip: `nav_shift`, `nav_corner_raise`, and `nav_corner_lower` will help you move nav areas.
+
+<!--Warning: Since the connection uses negative coordinates, the mesh may start to have issues. Becareful-->
 
 ## Testing a Nav mesh
 <hr>
