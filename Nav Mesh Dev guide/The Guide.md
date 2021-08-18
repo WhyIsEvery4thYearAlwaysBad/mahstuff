@@ -77,6 +77,15 @@ There will be moments where you'll need multiple TFAttributes to get bots to wor
 
 Tip: `nav_splice`, `nav_shift`, `nav_corner_raise`, and `nav_corner_lower` will help you shift nav areas onto each other.
 
+### Forcing a connection
+<hr>
+
+Some connections cannot be made, because the connection would go in a negative direction and become degenerate. Degenerate areas are areas that use negative coordinates.
+
+To get around this issue, move the nav mesh to where the desired connection can be made without becoming degenerate. 
+
+Tip: `nav_splice`, `nav_shift`, `nav_corner_raise`, and `nav_corner_lower` will help you move nav areas.
+
 ## Testing a Nav mesh
 <hr>
 
