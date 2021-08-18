@@ -45,7 +45,7 @@ An important lesson to learn before developing nav meshes is that you ***will***
 #### Size
 Each nav area takes up 768 bytes. 768 bytes is a small amount of storage space today, so while it is a good idea to try to simplify nav areas to save on storage space, 
 
-**It is bad to oversimplify nav areas** as TF2 uses nav areas to determine where Demoman TFBots place sticky traps and areas that have sentries in range. So nav areas
+**It is bad to oversimplify nav areas** as TF2 uses nav areas to determine where Demoman TFBots place sticky traps and areas that are visible to sentries. So nav areas should not be combined too much.
 
 ### Walls
 
