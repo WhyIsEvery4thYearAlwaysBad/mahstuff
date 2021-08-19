@@ -67,7 +67,9 @@ You can get bots to airstrafe to a spot by organizing nav ares into a layout tha
 
 Bots at the starting point will presumably jump to the turning point, then turn towards the the destination once they hit the turning point nav area and will reach the destination.
 
-Airstrafe paths don't have to be in this particular layout. For instance you can reverse the starting point and destination, add two destinations, use monodirectional connections instead of bidirectional connections, etc.
+It is recommended to keep the turning point area small so that bots don't try to move forward while turning.
+
+Airstrafe paths don't have to be in this particular layout. For instance you can reverse the starting point and destination, add two destinations, use monodirectional connections instead of bidirectional connections, have multiple turning points, etc.
 
 ### Stacked Areas
 <hr>
