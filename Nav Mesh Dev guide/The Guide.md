@@ -12,7 +12,6 @@ This is a guide dedicated to Mapmakers and Navmesh Developers. It is recommend t
 * `tf_show_mesh_decoration_manual` - Shows all TFAttributes in nav areas *except* `BLUE_ONE_WAY_DOOR`, `RED_ONE_WAY_DOOR`, `TF_NAV_HAS_AMMO`, `TF_NAV_HAS_HEALTH`, and `TF_NAV_CONTROL_POINT`.
 
 `tf_show_mesh_decoration_manual` is processed before `tf_show_mesh_decoration` in the game code.
-<hr>
 
 * `tf_show_blocked_areas` - Shows areas blocked by a demographic (Purple for both teams, red for RED team, blue for BLU team). This is handy for debugging TF attribute logic.
 * `tf_show_control_points` - Shows `TF_NAV_CONTROL_POINT` attributes that are directly under control points in yellow, and ones that are adjacent to a control point in dark yellow.
