@@ -95,7 +95,7 @@ Tip: `nav_shift`, `nav_corner_raise`, and `nav_corner_lower` will help you move 
 ## Testing a Nav mesh
 <hr>
 
-Navmeshes need testing so that you can fix bugs in them and ensure they actually function, before releasing them or implementing the nav mesh into your map. ***Always*** analyze the nav mesh before testing it, *unless* it is impossible to do so. TFBots rely on the nav mesh for movement and visibility, so it is important to analyze it to get meta datae. TFBots in unanalyzed meshes will be slower to react to enemies.
+Navmeshes need testing so that you can fix bugs in them and ensure they actually function, before releasing them or implementing the nav mesh into your map. ***Always* analyze the nav mesh before testing it, *unless* it is impossible to do so.** TFBots rely on the nav mesh for movement and visibility, so it is important to analyze it to get metadata. TFBots in unanalyzed meshes will be slower to react to enemies and will not work as well.
 
 ### Test a specific path
 
@@ -113,5 +113,3 @@ Medic TFBots ignore the nav mesh when healing a patient, which can be useful whe
 
 There's a reason you're reading this. `nav_generate` does an okish, but not a good, job at creating a nav mesh; `nav_generate` often generates biconnections where they shouldn't be, fails to account for all possible areas that players can reach, makes nav areas too close to walls, etc. These sorts of details can influence how well bots play TF2, and may in fact turn off a player from playing with bots.
 -->
-
-Checksum: <!-- Insert checksum here. -->
