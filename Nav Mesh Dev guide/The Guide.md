@@ -15,6 +15,7 @@ This is a guide dedicated to Mapmakers and Navmesh Developers. It is recommend t
 
 * `tf_show_blocked_areas` - Shows areas blocked by a demographic (Purple for both teams, red for RED team, blue for BLU team). This is handy for debugging TF attribute logic.
 * `tf_show_control_points` - Shows `TF_NAV_CONTROL_POINT` attributes that are directly under control points in yellow, and ones that are adjacent to a control point in dark yellow.
+* `tf_show_incursion_flow` - Shows the paths that each team will take to get to their enemy's spawn room.
 * `tf_show_sentry_danger` - Shows nav areas that are in range of sentries.
 
 ## TFAttributes
