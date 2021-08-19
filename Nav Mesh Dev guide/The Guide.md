@@ -38,7 +38,7 @@ This is a guide dedicated to Mapmakers and Navmesh Developers. It is recommend t
 
 ## TFAttributes
 <hr>
-TF2 has specific attributes for Doors, RED and BLU teams, and control point logic. These are:
+TF2 has specific attributes for Doors, RED and BLU teams, and control point logic. (I will call these TFAttributes for brevity.) These are:
 
 1. `TF_NAV_UNBLOCKABLE` - Prevents an area from being blocked.
 2. `TF_NAV_BLOCKED` and by proxy `BLOCKED_UNTIL_POINT_CAPTURE` and `BLOCKED_AFTER_POINT_CAPTURE`.
