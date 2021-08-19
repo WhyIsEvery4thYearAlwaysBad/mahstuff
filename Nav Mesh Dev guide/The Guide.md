@@ -39,9 +39,6 @@ You may notice that I have listed TFAttributes in an ordered list, instead of an
 
 ### General
 
-#### Compromise
-An important lesson to learn before developing nav meshes is that you ***will*** have to compromise at some point. 
-
 #### Size
 Each nav area takes up 768 bytes. 768 bytes is a small amount of storage space today, so while it is a good idea to try to simplify nav areas to save on storage space, 
 
