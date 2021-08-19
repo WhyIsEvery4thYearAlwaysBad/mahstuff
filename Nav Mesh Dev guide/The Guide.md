@@ -10,6 +10,7 @@ This is a guide dedicated to Mapmakers and Navmesh Developers. It is recommend t
 
 * `tf_show_mesh_decoration` - Shows all TFAttributes in nav areas.
 * `tf_show_mesh_decoration_manual` - Shows all TFAttributes in nav areas *except* `BLUE_ONE_WAY_DOOR`, `RED_ONE_WAY_DOOR`, `TF_NAV_HAS_AMMO`, `TF_NAV_HAS_HEALTH`, and `TF_NAV_CONTROL_POINT`.
+
 `tf_show_mesh_decoration_manual` is processed before `tf_show_mesh_decoration` in the game code.
 <hr>
 
