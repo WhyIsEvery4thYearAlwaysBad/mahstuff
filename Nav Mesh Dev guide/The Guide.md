@@ -8,6 +8,24 @@ This is a guide dedicated to Mapmakers and Navmesh Developers. It is recommend t
 
 ## Useful Commands
 
+* `nav_quicksave` - If set to 1, `nav_quicksave` will prevent the nav mesh from being decorate when the mesh is generated or analysed.
+
+* `nav_generate` - Generates the nav mesh.
+	* `nav_quicksave 0` will make `nav_generate` analyse the generated mesh.
+
+* `nav_analyze` - Analyzes the nav mesh.
+	* `nav_quicksave 0` will make `nav_analyze` decorate the generated mesh.
+
+* `nav_area_max_size` - Determines the largest area size that can be created during mesh generation.
+<hr>
+
+* `nav_corner_adjust_adjacent` - Determines how close adjacent areas have to be to the edited area in order to be modified by `nav_corner` and `nav_corner_place_on_ground` commands.
+
+* `nav_begin_shift_xy` - Starts shifting of a selected set with mouse movements.
+* `nav_end_shift_xy` - Ends shifting of a selected set with mouse movements.
+
+<hr>
+
 * `tf_show_mesh_decoration` - Shows all TFAttributes in nav areas.
 * `tf_show_mesh_decoration_manual` - Shows all TFAttributes in nav areas *except* `BLUE_ONE_WAY_DOOR`, `RED_ONE_WAY_DOOR`, `TF_NAV_HAS_AMMO`, `TF_NAV_HAS_HEALTH`, and `TF_NAV_CONTROL_POINT`.
 
