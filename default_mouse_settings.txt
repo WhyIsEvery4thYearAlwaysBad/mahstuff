@@ -1,0 +1,26 @@
+Device 'Razer Razer Viper Mini':
+	Device Enabled (180):	1
+	Coordinate Transformation Matrix (182):	1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000
+	libinput Natural Scrolling Enabled (315):	0
+	libinput Natural Scrolling Enabled Default (316):	0
+	libinput Scroll Methods Available (317):	0, 0, 1
+	libinput Scroll Method Enabled (318):	0, 0, 0
+	libinput Scroll Method Enabled Default (319):	0, 0, 0
+	libinput Button Scrolling Button (320):	2
+	libinput Button Scrolling Button Default (321):	2
+	libinput Middle Emulation Enabled (322):	0
+	libinput Middle Emulation Enabled Default (323):	0
+	libinput Accel Speed (324):	-0.561644
+	libinput Accel Speed Default (325):	0.000000
+	libinput Accel Profiles Available (326):	1, 1
+	libinput Accel Profile Enabled (327):	1, 0
+	libinput Accel Profile Enabled Default (328):	1, 0
+	libinput Left Handed Enabled (329):	0
+	libinput Left Handed Enabled Default (330):	0
+	libinput Send Events Modes Available (300):	1, 0
+	libinput Send Events Mode Enabled (301):	0, 0
+	libinput Send Events Mode Enabled Default (302):	0, 0
+	Device Node (303):	"/dev/input/event11"
+	Device Product ID (304):	5426, 138
+	libinput Drag Lock Buttons (331):	<no items>
+	libinput Horizontal Scroll Enabled (332):	1
