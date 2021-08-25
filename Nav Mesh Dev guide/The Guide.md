@@ -55,9 +55,9 @@ When creating nav areas that are close to walls, try not to push them up into th
 
 ### Spawn Rooms
 
-TF2 automatically marks spawn rooms and spawn exits with attributes. Alternatively if there are spawn exits that have not been marked with `TF_NAV_SPAWN_ROOM_EXIT`, you can mark them with `BLUE_SETUP_GATE` or `RED_SETUP_GATE`.
+TF2 automatically marks spawn rooms and spawn exits with attributes, so there is usually no need to mark them manually. However if there are spawn exits that have not been marked with `TF_NAV_SPAWN_ROOM_EXIT`, you can mark them with `BLUE_SETUP_GATE` or `RED_SETUP_GATE`.
 
-Do not use the one-way team attributes (`BLUE_ONE_WAY_DOOR` and `RED_ONE_WAY_DOOR`) for spawn doors, as they do not account for setup time.
+Do not use the one-way team attributes (`BLUE_ONE_WAY_DOOR` and `RED_ONE_WAY_DOOR`) for spawn doors, as they do not account for setup time, and prevent the enemy team from entering regardless if the enemy team has won.
 
 ## Techniques
 
@@ -100,7 +100,7 @@ However it is a good idea to move #2 and #3 into the same position, so that bots
 
 Some connections cannot be made, because the connection would go in a negative direction and become degenerate. Degenerate areas are areas that use negative coordinates.
 
-To get around this issue, move the nav mesh to where the desired connection can be made without becoming degenerate. 
+To get around this issue, move the nav mesh to where the desired connection can be made without becoming degenerate.
 
 Tip: `nav_shift`, `nav_corner_raise`, and `nav_corner_lower` will help you move nav areas.
 
