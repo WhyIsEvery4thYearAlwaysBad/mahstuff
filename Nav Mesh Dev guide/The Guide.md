@@ -85,6 +85,16 @@ There will be moments where you'll need multiple TFAttributes to get bots to wor
 
 Tip: `nav_shift`, `nav_corner_raise`, and `nav_corner_lower` will help you shift nav areas onto each other.
 
+Example: You encounter a spawn door that opens when the 2nd point is capped and closes when 4th is capped.
+
+![2 Assets on top of each other.](assets/stacked_area_example.gif)
+
+In this case, nav area #1 is in the battleground, #2 and #3 are in the spawn door, and #4 is in the spawn room. Marking #2 or #3 *alone* would result in blocked-status collision from blocking priority, and as such will not work in this case.
+
+Instead #2 should be marked with `BLOCKED_UNTIL_POINT_CAPTURE` and `WITH_SECOND_POINT`, and #3 with `BLOCKED_AFTER_POINT_CAPTURE` and `WITH_FOURTH_POINT`; This way the attributes will work properly with each other and will not try to override their blocked statuses.
+
+However it is a good idea to move #2 and #3 into the same position, so that bots will not try to move in weird directions before getting to #1.
+
 ### Forcing a connection
 <hr>
 
