@@ -6,6 +6,8 @@ Heads up: **This guide uses pictures to illustrate some sections.** It is thus r
 
 This is a guide dedicated to Mapmakers and Navmesh Developers. It is recommend to read the VDC Wiki entries on the [Navigation Mesh](https://developer.valvesoftware.com/wiki/Navigation_Meshes) and [`tf_bot`s](https://developer.valvesoftware.com/wiki/Tf_bot) as this guide assumes that you have some background knowledge and experience with Nav Meshes.
 
+NOTE: The information presented in this guide is based off primitive reverse engineering, the 2018 Jungle Inferno code leak, 2013 Source SDK, and observations.
+
 ## Useful Commands
 
 [General nav mesh commands.](https://developer.valvesoftware.com/wiki/Navigation_Mesh_Commands)
