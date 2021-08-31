@@ -109,7 +109,7 @@ Tip: `nav_shift`, `nav_corner_raise`, and `nav_corner_lower` will help you move 
 ## Testing a Nav mesh
 <hr>
 
-Navmeshes need testing so that you can fix bugs in them and ensure they actually function, before releasing them or implementing the nav mesh into your map. ***Always* analyze the nav mesh before testing it, *unless* it is impossible to do so.** TFBots rely on the nav mesh for movement and visibility, so it is important to analyze it to get metadata. TFBots in unanalyzed meshes will be slower to react to enemies and will not work as well.
+Nav meshes need testing so that you can fix bugs in them and ensure they actually function, before releasing them or implementing the nav mesh into your map. ***Always* analyze the nav mesh before testing it, *unless* it is impossible to do so.** TFBots rely on the nav mesh for movement and visibility, so it is important to analyze it to get metadata. TFBots in unanalyzed meshes will be slower to react to enemies, due to mismatched mesh visibility data, and in general will not work as well.
 
 ### Test a specific path
 
