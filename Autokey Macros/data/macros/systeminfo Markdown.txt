@@ -1,26 +1,39 @@
 OS(es): Dualboot
-* Primary: Linux Mint 20.2 Uma MATE x86-64
-    * Kernel: Linux 5.4.0-77-generic
+
+* Primary: Linux Mint 20.2 Uma x86-64
+    * Base: Ubuntu 20.04 focal
+    * Kernel: 5.13.0-12.1-liquorix-amd64
+    * Desktop Environment: X11 MATE
 * Secondary: Windows 10 Home 21H1 x86-64
+
 CPU: Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz (64 bits)
+
 * Size: 2240MHz
 * Capacity: 4200MHz
 * Clock: 100MHz
 * Capabilities: lm fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp x86-64 constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d arch_capabilities cpufreq
 * Configuration: cores=4 enabledcores=4 threads=8
+
 Memory: SODIMM DDR4 Synchronous 2667 MHz (0.4 ns)
+
 Display: Intel UHD Graphics (x64) @ 33Mhz
+
 * Capabilities: pciexpress msi pm vga_controller bus_master cap_list rom
 * Configuration: driver=i915 latency=0
+
 Network: RTL8821CE 802.11ac PCIe Wireless Network Adapter (x64)
+
 * Capabilities: pm msi pciexpress bus_master cap_list ethernet physical wireless
 * Configuration: broadcast=yes driver=rtl8821ce ip=10.0.0.10 latency=0 multicast=yes wireless=IEEE 802.11AC
+
 Storage:
+
 * Description: Non-Volatile memory controller
 * Width: 64 bits
 * Clock: 33MHz
 * Capabilities: storage pm msix pciexpress msi nvm_express bus_master cap_list
-*Cconfiguration: driver=nvme latency=0
+* Configuration: driver=nvme latency=0
+
 Battery:
        capacity: 41926mWh
        configuration: voltage=11.6V

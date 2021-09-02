@@ -1,31 +1,31 @@
 {
     "type": "phrase",
-    "description": "less_than",
+    "description": "umulat u",
     "modes": [
         1
     ],
-    "usageCount": 0,
+    "usageCount": 21,
     "prompt": false,
     "omitTrigger": false,
-    "matchCase": false,
+    "matchCase": true,
     "showInTrayMenu": false,
     "abbreviation": {
         "abbreviations": [
-            "<="
+            ":u:"
         ],
         "backspace": true,
-        "ignoreCase": false,
+        "ignoreCase": true,
         "immediate": true,
         "triggerInside": false,
         "wordChars": "[\\w]"
     },
     "hotkey": {
-        "modifiers": [],
+        "modifiers": null,
         "hotKey": null
     },
     "filter": {
         "regex": null,
         "isRecursive": false
     },
-    "sendMode": "<ctrl>+v"
+    "sendMode": "kb"
 }

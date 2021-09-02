@@ -1,31 +1,31 @@
 {
     "type": "phrase",
-    "description": "umulat u",
+    "description": "maccel (Markdown)",
     "modes": [
         1
     ],
-    "usageCount": 15,
+    "usageCount": 1,
     "prompt": false,
     "omitTrigger": false,
-    "matchCase": true,
+    "matchCase": false,
     "showInTrayMenu": false,
     "abbreviation": {
         "abbreviations": [
-            ":u:"
+            "[mouseaccel]"
         ],
         "backspace": true,
-        "ignoreCase": true,
+        "ignoreCase": false,
         "immediate": true,
         "triggerInside": false,
         "wordChars": "[\\w]"
     },
     "hotkey": {
-        "modifiers": [],
+        "modifiers": null,
         "hotKey": null
     },
     "filter": {
         "regex": null,
         "isRecursive": false
     },
-    "sendMode": "<ctrl>+v"
+    "sendMode": "kb"
 }

@@ -1,0 +1,35 @@
+# Before I give you my response, please read this preface.
+Disclaimer: I have no experience or expertise in aim training; I'm just copy pasting details that I have researched and are from actual aim training experts.
+<hr>
+Mouse acceleration in concept is fine. **It does not affect long-term aim *at all***; this is a shitty myth that comes from confirmation bias and lack of scientific testing.
+
+Also please stop copying settings from pro gamers. What they use is THEIR preference, not general settings.
+
+## "Mouse Accel is conceptually bad for your aim!"
+
+False. Mouse accel is not conceptually bad; it's the implementation that can make mouse accel good or bad.
+
+Good Implementations of mouse accel:
+
+* [RawAccel](https://github.com/a1xd/rawaccel)
+
+Okish implementations of mouse accel:
+* [evdev](https://www.freedesktop.org/wiki/Software/libevdev/) driver.
+
+Bad implementations:
+* *Default* windows mouse accel. (It can be customized through regedit, but you may as well just use another program.
+* Source Engine mouse accel because it bases mouse movements off frame rate. (Seriously why the fuck does Valve keep using frame rate for timing?)
+
+## "It hurts long-term aim."
+
+Bullshit. The only "bad" thing mouse accel can do is just make you lose familiarity with your mouse, which only happens when you initially use it. After using it for enough time, you gain more familiarity and are able to switch to/from mouse accel easily.
+
+## "But it ruins muscle memory!"
+## "But muh muscle memory!"
+
+Muscle memory is a real thing as it refers to motor learning. However when it comes to aim, 'Muscle Memory' is a misnomer as it greatly oversimplifies the mechanics that go into aim. What people really mean by 'muscle memory' in the context of aim, is the combination of mouse control, hand-eye coordination, and other body functions. 
+
+If you have good mouse control and hand-eye coordination, then you will have good aim regardless of how much you change your mouse configuration. Conversely if you have bad mouse control and hand-eye coordination, then your aim is not going to improve regardless if you use mouse accel or change mouse configs 24/7.
+
+<hr>
+# The actual response

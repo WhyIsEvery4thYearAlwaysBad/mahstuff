@@ -1,20 +1,20 @@
 {
     "type": "phrase",
-    "description": "not related to",
+    "description": "umulat u",
     "modes": [
         1
     ],
-    "usageCount": 0,
+    "usageCount": 20,
     "prompt": false,
     "omitTrigger": false,
-    "matchCase": false,
+    "matchCase": true,
     "showInTrayMenu": false,
     "abbreviation": {
         "abbreviations": [
-            "~!="
+            ":u:"
         ],
         "backspace": true,
-        "ignoreCase": false,
+        "ignoreCase": true,
         "immediate": true,
         "triggerInside": false,
         "wordChars": "[\\w]"

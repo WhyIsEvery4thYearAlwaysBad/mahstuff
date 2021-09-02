@@ -1,20 +1,20 @@
 {
     "type": "phrase",
-    "description": "systeminfo",
+    "description": "greater_than",
     "modes": [
         1
     ],
-    "usageCount": 0,
+    "usageCount": 9,
     "prompt": false,
     "omitTrigger": false,
     "matchCase": false,
     "showInTrayMenu": false,
     "abbreviation": {
         "abbreviations": [
-            "[systeminfo]"
+            ">="
         ],
         "backspace": true,
-        "ignoreCase": true,
+        "ignoreCase": false,
         "immediate": true,
         "triggerInside": false,
         "wordChars": "[\\w]"
@@ -27,5 +27,5 @@
         "regex": null,
         "isRecursive": false
     },
-    "sendMode": "<shift>+<insert>"
+    "sendMode": "<ctrl>+v"
 }
