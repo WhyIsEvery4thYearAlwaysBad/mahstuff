@@ -2,13 +2,11 @@
 
 Heads up: **This guide uses pictures to illustrate some sections.** It is thus recommend to enable picture elements on your browser. If you can't do that, then download the assets so you can follow along easier (and also save bandwidth).
 
-# TF2 Navmesh Development Guide
-
 This is a guide dedicated to Mapmakers and Navmesh Developers. It is recommend to read the VDC Wiki entries on the [Navigation Mesh](https://developer.valvesoftware.com/wiki/Navigation_Meshes) and [`tf_bot`s](https://developer.valvesoftware.com/wiki/Tf_bot) as this guide assumes that you have some background knowledge and experience with Nav Meshes.
 
 NOTE: The information presented in this guide is based off primitive reverse engineering, the 2018 Jungle Inferno code leak, 2013 Source SDK, and observations.
 
-## Useful Commands
+# Useful Commands
 
 [General nav mesh commands.](https://developer.valvesoftware.com/wiki/Navigation_Mesh_Commands)
 
@@ -24,7 +22,7 @@ NOTE: The information presented in this guide is based off primitive reverse eng
 * `tf_show_incursion_flow` - Shows the paths that each team will take to get to their enemy's spawn room.
 * `tf_show_sentry_danger` - Shows nav areas that are in range of sentries.
 
-## TFAttributes
+# TFAttributes
 <hr>
 TF2 has specific attributes for Doors, RED and BLU teams, and control point logic. (I will call these TFAttributes for brevity.) These are:
 
@@ -42,37 +40,41 @@ You may notice that I have listed TFAttributes in an ordered list, instead of an
 
 `DOOR_ALWAYS_BLOCKS` and `DOOR_NEVER_BLOCKS` are processed during nav mesh analysis, so they are not processed with the other TFAttributes.
 
-## The Mesh
+# The Map and the Nav Mesh
 
-### General
+## General
 
-#### Size
+### Size
 Each nav area takes up 768 bytes. 768 bytes is a small amount of storage space, compared to the soon-to-be-common TB drives of today. Still it is a good idea to try to simplify nav areas to save on storage space, but the form and function should be prioritized.
 
 **It is bad to oversimplify nav areas** as TF2 uses nav areas to determine where Demoman TFBots place sticky traps and areas that are visible to sentries. So nav areas should not be combined too much, so that the game can accurately determine what areas are visible to sentries.
 
 
-#### Encounter Paths
+### Encounter Paths
 
 Do not bother with encounter paths, as they are not used in Team Fortress 2; they are only used in the Counter-Strike Series.
 
-#### Occupation Times
+### Occupation Times
 
 Do not bother with occupation times, as they are not used in Team Fortress 2; they are only used in the Counter-Strike Series.
 
-### Walls
+## Walls
 
 When creating nav areas that are close to walls, try not to push them up into the wall; leave spacing so TFBots don't try to walk into the wall.
 
-### Spawn Rooms
+## Spawn Rooms
 
 TF2 automatically marks spawn rooms and spawn exits with attributes, so there is usually no need to mark them manually. However if there are spawn exits that have not been marked with `TF_NAV_SPAWN_ROOM_EXIT`, you can mark them with `BLUE_SETUP_GATE` or `RED_SETUP_GATE`.
 
 Do not use the one-way team attributes (`BLUE_ONE_WAY_DOOR` and `RED_ONE_WAY_DOOR`) *alone* for spawn doors, as they do not account for setup time, and prevent the enemy team from entering regardless if the enemy team has won. Add an extra route for BLU team to ensure all bots can get to a destination.
 
-## Techniques
+## Ammunition and Health packs.
 
-### Airstrafe Paths
+Ammo and Health packs should be contained in their own nav area, so that the bot is able to directly navigate to them, and also so that the bot will be less as like to walk over them by accident.
+
+# Techniques
+
+## Airstrafe Paths
 <hr>
 
 You can get bots to airstrafe to a spot by organizing nav ares into a layout that I call an "Airstrafe Path".
@@ -87,7 +89,7 @@ It is recommended to keep the turning point area small so that bots don't try to
 
 Airstrafe paths don't have to be in this particular layout. For instance you can reverse the starting point and destination, add two destinations, use monodirectional connections instead of bidirectional connections, have multiple turning points, etc.
 
-### Stacked Areas
+## Stacked Areas
 <hr>
 
 There will be moments where you'll need multiple TFAttributes to get bots to work with some map logic, or a specific path of nav areas to setup bots for a jump. **Since TFAttributes actually *override* each others blocked status**, and you often want to preserve the original nav area for full movement, **it is often a good idea to stack nav areas on top of other nav areas**.
@@ -106,23 +108,23 @@ Instead #2 should be marked with `BLOCKED_UNTIL_POINT_CAPTURE` and `WITH_SECOND_
 
 However it is a good idea to move #2 and #3 into the same position, so that bots will not try to move in weird directions before getting to #1.
 
-### Forcing a connection
+## Enforcing properties onto nav areas.
 <hr>
-
-Some connections cannot be made, because the connection would go in a negative direction. This is for stability reasons, as these connections can cause crashes sometimes. However the nav mesh editor may still need that connection regardless.
 
 Through the use of `nav_save_selected` and `nav_merge_mesh`, it is possible to not only forcefully make connections, but also nav areas with custom shapes. This is possible due to these two commands using a file to store and retrive nav mesh data.
 
-Tip: `nav_shift`, `nav_corner_raise`, and `nav_corner_lower` will help you move nav areas.
+Some connections cannot be made, because the connection would go in a negative direction. This is for stability reasons, as these connections can cause crashes sometimes. However the nav mesh editor may still need that connection regardless.
+
+Tip: `nav_shift`, `nav_corner_raise`, and `nav_corner_lower` will help you shift nav areas.
 
 <!--Warning: Since the connection uses negative coordinates, the mesh may start to have issues.-->
 
-## Testing a Nav mesh
+# Testing a Nav mesh
 <hr>
 
 Nav meshes need testing so that you can fix bugs in them and ensure they actually function, before releasing them or implementing the nav mesh into your map. ***Always* analyze the nav mesh before testing it, *unless* it is impossible to do so.** TFBots rely on the nav mesh for movement and visibility, so it is important to analyze it to get metadata. TFBots in unanalyzed meshes will be slower to react to enemies, due to mismatched mesh visibility data, and in general will not work as well.
 
-### Test a specific path
+## Test a specific path
 
 Traditionally specific paths are tested through `bot_moveto` (or in CS:GO's case `bot_zombie 1` and `bot_goto_selected`) with a puppet bot. Unfortunately though, `bot_moveto` currently (as of August 2021) does not work in Team Fortress 2, so the next best alternative is to use opposite-team flags to get bots to move to a nav area.
 
@@ -132,9 +134,9 @@ Medic TFBots ignore the nav mesh when healing a patient, which can be useful whe
 
 <!-- The FAQ
 
-## FAQ
+# FAQ
 
-### "What's the point of improving/making nav meshes when I can just use nav_generate?"
+## "What's the point of improving/making nav meshes when I can just use nav_generate?"
 
-There's a reason you're reading this. `nav_generate` does an okish, but not a good, job at creating a nav mesh; `nav_generate` often generates biconnections where they shouldn't be, fails to account for all possible areas that players can reach, makes nav areas too close to walls, etc. These sorts of details can influence how well bots play TF2, and may in fact turn off a player from playing with bots.
+There's a reason you're reading this. **`nav_generate` does an okish, but not a good, job at creating a nav mesh**; `nav_generate` often generates biconnections where they shouldn't be, fails to account for all possible areas that players can reach, makes nav areas too close to walls, etc. These sorts of details can influence how well bots play TF2, and may in fact turn off a player from playing with bots.
 -->
