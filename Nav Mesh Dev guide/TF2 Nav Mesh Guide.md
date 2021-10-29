@@ -47,7 +47,7 @@ You may notice that I have listed TFAttributes in an ordered list, instead of an
 ## General
 
 ### Size
-Each nav area takes up 768 bytes. 768 bytes is a small amount of storage space, compared to the soon-to-be-common TB drives of today. Still it is a good idea to try to simplify nav areas to save on storage space, but the form and function should be prioritized.
+In Team Fortress 2, each nav area takes up at least 108 bytes. 108 bytes is a small amount of storage space, compared to the soon-to-be-common TB drives of today. Still it is a good idea to try to simplify nav areas to save on storage space, but the form and function should be prioritized.
 
 **It is bad to oversimplify nav areas** as TF2 uses nav areas to determine where Demoman TFBots place sticky traps and areas that are visible to sentries. So nav areas should not be combined too much, so that the game can accurately determine what areas are visible to sentries.
 
@@ -72,7 +72,7 @@ Do not use the one-way team attributes (`BLUE_ONE_WAY_DOOR` and `RED_ONE_WAY_DOO
 
 ## Ammunition and Health packs.
 
-Ammo and Health packs should be contained in their own nav area, so that the bot is able to directly navigate to them, and also so that the bot will be less as like to walk over them by accident.
+Ammo and Health packs should be contained in their own nav area, so that the bot is able to directly navigate to them, and also so that the bot will be less likely to walk over them by accident.
 
 # Techniques
 
