@@ -35,6 +35,8 @@ TF2 has specific attributes for Doors, RED and BLU teams, and control point logi
 
 * `DOOR_ALWAYS_BLOCKS` - Blocks nav area upon `func_door` being closed.
 * `DOOR_NEVER_BLOCKS` - Prevents nav area from being blocked by `func_door`s.
+* `SNIPER_SPOT` - Unused TFAttribute meant for the raid game mode. It was meant to mark areas to be utilized by snipers.
+* `SENTRY_SPOT` - Unused TFAttribute meant for the raid game mode. It was meant to mark areas to build sentries at.
 
 You may notice that I have listed TFAttributes in an ordered list, instead of an unordered list. This is intentional as **TFAttributes override each others' blocked status(es)**, so the ordered list represents the order the TFAttributes' blocked status is processed.
 
