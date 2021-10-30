@@ -49,8 +49,7 @@ You may notice that I have listed TFAttributes in an ordered list, instead of an
 ### Size
 In Team Fortress 2, each nav area takes up at least 108 bytes. 108 bytes is a small amount of storage space, compared to the soon-to-be-common TB drives of today. Still it is a good idea to try to simplify nav areas to save on storage space, but the form and function should be prioritized.
 
-**It is bad to oversimplify nav areas** as TF2 uses nav areas to determine where Demoman TFBots place sticky traps and areas that are visible to sentries. So nav areas should not be combined too much, so that the game can accurately determine what areas are visible to sentries.
-
+**It is bad to *over*simplify nav areas** as all Source-Engine Games that use NAV Vesrion 16, not just TF2, uses nav areas to determine where Demoman TFBots place sticky traps and areas that are visible to sentries. So nav areas should not be combined too much, so that the game can accurately determine what areas are visible to sentries.
 
 ### Encounter Paths
 
@@ -72,7 +71,9 @@ Do not use the one-way team attributes (`BLUE_ONE_WAY_DOOR` and `RED_ONE_WAY_DOO
 
 ## Ammunition and Health packs.
 
-Ammo and Health packs should be contained in their own nav area, so that the bot is able to directly navigate to them, and also so that the bot will be less likely to walk over them by accident.
+Ammo and Health packs should be contained in their own nav area, so that the bot is able to directly navigate to them, and they will be less likely to walk over them by accident.
+
+Also add `func_nav_cost` entities to Ammo/Health pack areas, so that bots will actually *try* to avoid wasting them.
 
 # Techniques
 
@@ -94,7 +95,7 @@ Airstrafe paths don't have to be in this particular layout. For instance you can
 ## Stacked Areas
 <hr>
 
-There will be moments where you'll need multiple TFAttributes to get bots to work with some map logic, or a specific path of nav areas to setup bots for a jump. **Since TFAttributes actually *override* each others blocked status**, and you often want to preserve the original nav area for full movement, **it is often a good idea to stack nav areas on top of other nav areas**.
+There will be moments where you'll need multiple TFAttributes to get bots to work with some map logic, and **since TFAttributes actually *override* each others blocked statuses**, just applying all the TFAttribtues to one area won't work; a specific path of nav areas to setup bots for a jump. In these cases you often want to preserve the original nav area for full movement, **it is often a good idea in these cases to stack nav areas on top of other nav areas**.
 
 <br>
 
