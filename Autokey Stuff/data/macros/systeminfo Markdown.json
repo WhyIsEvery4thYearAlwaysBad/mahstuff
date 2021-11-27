@@ -1,0 +1,31 @@
+{
+    "type": "phrase",
+    "description": "systeminfo (Markdown)",
+    "modes": [
+        1
+    ],
+    "usageCount": 3,
+    "prompt": true,
+    "omitTrigger": false,
+    "matchCase": false,
+    "showInTrayMenu": false,
+    "abbreviation": {
+        "abbreviations": [
+            "[systeminfo]"
+        ],
+        "backspace": true,
+        "ignoreCase": true,
+        "immediate": true,
+        "triggerInside": false,
+        "wordChars": "[\\w]"
+    },
+    "hotkey": {
+        "modifiers": null,
+        "hotKey": null
+    },
+    "filter": {
+        "regex": null,
+        "isRecursive": false
+    },
+    "sendMode": "kb"
+}
