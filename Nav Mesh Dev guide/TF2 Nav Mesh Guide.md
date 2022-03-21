@@ -92,6 +92,16 @@ It is recommended to keep the turning point area small so that bots don't try to
 
 Airstrafe paths don't have to be in this particular layout. For instance you can reverse the starting point and destination, add two destinations, use monodirectional connections instead of bidirectional connections, have multiple turning points, etc.
 
+---
+
+The technique of airstrafe paths can be applied to *any* navigation area, not just paths.
+
+### How does this technique work?
+
+Bots will always attempt to travel on a navigation area, regardless if they are grounded. (In the example airstrafe path, the bot is trying to move forward then turn left. When the airstrafe path is off the ground; the bot will move forward, then turn left, which results in the bot airstrafing to the left.)
+
+Conveniently, airstrafes are done by turning left or right with forward motion. Since the bot can generate forward motion and turn left or right; the bot can technically airstrafe.
+
 ## Stacked Areas
 <hr>
 
